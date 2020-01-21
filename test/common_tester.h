@@ -518,22 +518,6 @@ public:
     ) << "+= failed at iteration " << i ;
   }
 
-  void evalNormalize()
-  {
-    typename LieGroup::DataType data = LieGroup::DataType::Random() * 100.;
-
-    EXPECT_THROW(
-      LieGroup a(data), manif::invalid_argument
-    );
-
-    Eigen::Map<LieGroup> map(data.data());
-    map.normalize();
-
-    EXPECT_NO_THROW(
-      LieGroup b = map
-    );
-  }
-
   void evalSmallAdj()
   {
     const Tangent delta_other = Tangent::Random();
