@@ -65,8 +65,6 @@
   { evalInner(); }                                                        \
   TEST_F(TEST_##manifold##_TESTER, TEST_##manifold##_NUMERICAL_STABILITY) \
   { evalNumericalStability(); }                                           \
-  TEST_F(TEST_##manifold##_TESTER, TEST_##manifold##_NORMALIZE)           \
-  { evalNormalize(); }                                                    \
   TEST_F(TEST_##manifold##_TESTER, TEST_##manifold##_SMALL_ADJ)           \
   { evalSmallAdj(); }
 
